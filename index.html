@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <script>
+
+var multipleQuestion=[{
+        "s.no":1,
+        "question":"what is your name? ",
+        "options":["shaheryar","ali","yusra","nimra"],
+        "answer":"nimra"
+    },
+    {
+        "s.no":2,
+        "question":"what is your age? ",
+        "options":[15,18,22,25],
+        "answer":22
+    },
+    {
+        "s.no":3,
+        "question":"where do you live? ",
+        "options":["karachi","islamabad","lahore","rawalpindi"],
+        "answer":"karachi"
+    },
+    {
+        "s.no":4,
+        "question":"which food do you like? ",
+        "options":["biryani","fish","pizza","charga"],
+        "answer":"fish"
+    }]
+    
+   score=0
+for(var i=0; i<multipleQuestion.length;i++){
+    data=(multipleQuestion[i]["s.no"])+":"+multipleQuestion[i]["question"] +"\n"+multipleQuestion[i]["options"][0]   +"\n"+multipleQuestion[i]["options"][1]+"\n"+multipleQuestion[i]["options"][2]+"\n"+multipleQuestion[i]["options"][3]+"\n"
+
+    answer=prompt(data)
+    if (answer==multipleQuestion[i]["answer"]){
+        score++
+
+    
+    }
+    
+}
+
+
+if (score<1){
+    alert("your score is: "+score+"\n"+"you failed")
+
+}
+else if(score>1 && score<3){
+    alert("your score is: "+score+"\n"+"you are doing great work but need some focus")
+
+}
+
+else{
+    alert("your score is: "+score+"\n"+"marvellous work !!")
+}
+</script>
+</body>
+</html>
